@@ -1,6 +1,5 @@
-import React from 'react'
-import styles from './styles.module.css'
+import { BasicLoadCounter } from './BasicLoadCounter'
+import { BasicEventCounter } from './BasicEventCounter'
+import IconEmoji  from "./IconEmoji";
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
-}
+export { BasicLoadCounter, BasicEventCounter, IconEmoji }
