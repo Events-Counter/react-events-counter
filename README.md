@@ -1,6 +1,11 @@
+# ✋ 🙅‍♀️ 🚫 THIS IS NOT YET READY FOR PUBLIC 🚫 🙅‍♀️ ✋
+## YOU WONT BE ABLE TO USE IT AS THIS LIBRARY REQUIRES AN API KEY TO COMMUNICATE WITH THE BACKEND.
+
+
+---
 # react-events-counter
 
-> react librarby for events-counter
+> react library for events-counter
 
 [![NPM](https://img.shields.io/npm/v/react-events-counter.svg)](https://www.npmjs.com/package/react-events-counter) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
