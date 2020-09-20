@@ -83,7 +83,12 @@ export function getCounts(assetId, eventId, setCount, dryRun) {
       .then(checkError)
       .then(
         (result) => {
-          setCount(result['counts'][0]['count'])
+          if (result['counts'].length > 0) {
+            setCount(result['counts'][0]['count'])
+          } else {
+            setCount('0')
+          }
+          
         },
         (error) => {
           console.error('Error: ', error)
