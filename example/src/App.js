@@ -21,7 +21,7 @@ const App = () => {
       <h1>Basic Event Counters</h1>
       <p>Note: Don't increments on load. Click event on icon supplied.</p>
 
-      Increments by 2
+      <h3>Increments by 2</h3>
       <BasicEventCounter
         assetId='home-page'
         eventId='page-views'
@@ -29,10 +29,9 @@ const App = () => {
         dryRun={true}
         text=' YES - I liked it &nbsp;' 
         icon={<IconEmoji symbol='👍&nbsp;' label='views' />}
-        // order={['text','icon','count']}
       />
       <br/>
-      Increments by 1
+      <h3>Increments by 1</h3>
       <BasicEventCounter
         // className='counter'
         assetId='home-page'
@@ -43,7 +42,8 @@ const App = () => {
         icon={<IconEmoji symbol='😐&nbsp;' label='views' />}
       />
       <br/>
-      Icon on left side of the counter
+      <h3>Change the order</h3>
+      <code>order=['text', 'icon', 'count']</code>
       <BasicEventCounter
         // className='counter'
         assetId='home-page'
@@ -52,19 +52,10 @@ const App = () => {
         dryRun={true}
         text='NOPE - I disliked it &nbsp;'
         icon={<IconEmoji symbol='👎&nbsp;' label='views' />}
+        order={['text','icon','count']}
       />
       <br/>
-      Icon on right side of the counter
-      <BasicEventCounter
-        // className='counter'
-        assetId='home-page'
-        eventId='page-views'
-        stepBy={5}
-        dryRun={true}
-        icon={<IconEmoji symbol='&nbsp;👋' label='views' />}
-      />
-      <br/>
-      A bigger size for the emoji
+      <h3>A bigger size for the emoji</h3>
       <BasicEventCounter
         // className='counter'
         assetId='home-page'
