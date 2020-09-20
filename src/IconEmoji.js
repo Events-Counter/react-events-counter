@@ -4,6 +4,7 @@ import styles from './styles.module.css'
 
 const IconEmoji = ({ className, label, symbol, size=2}) => (
     <span
+        key={`${label}`}
         className={`${styles.emoji} ${className}`}
         role="img"
         style={{fontSize: size+"em"}}

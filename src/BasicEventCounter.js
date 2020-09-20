@@ -11,8 +11,9 @@ export function BasicEventCounter({
   eventId,
   stepBy = 1,
   className,
-  iconCompLeft = '',
-  iconCompRight = '',
+  icon = '',
+  text = '',
+  order = ['icon', 'text', 'count'],
   dryRun = false
 }) {
   const [count, setCount] = useState(dryRun ? 162484 : undefined)
@@ -24,11 +25,19 @@ export function BasicEventCounter({
   if (count) {
     return (
       <div
+        key={`${assetId}#${eventId}`}
         className={`${styles.emojiContainer} ${className}`}
         onClick={() =>
           postCounts(assetId, eventId, stepBy, count, setCount, dryRun)
         }
-      >{iconCompLeft}<p>{count}</p>{iconCompRight}
+      >
+        {order.map((item, index) => {
+          switch(item) {
+            case 'icon': return <div key='icon'>{icon}</div>
+            case 'text': return <p key='text'>{text}</p>
+            case 'count': return <p key='count'>({count})</p>
+          }
+        })}
       </div>
     )
   } else {

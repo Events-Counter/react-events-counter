@@ -23,12 +23,13 @@ const App = () => {
 
       Increments by 2
       <BasicEventCounter
-        className='counter'
         assetId='home-page'
         eventId='page-views'
         stepBy={2}
         dryRun={true}
-        iconCompLeft={<IconEmoji symbol='👍&nbsp;' label='views' />}
+        text=' YES - I liked it &nbsp;' 
+        icon={<IconEmoji symbol='👍&nbsp;' label='views' />}
+        // order={['text','icon','count']}
       />
       <br/>
       Increments by 1
@@ -38,7 +39,8 @@ const App = () => {
         eventId='page-views'
         stepBy={1}
         dryRun={true}
-        iconCompLeft={<IconEmoji symbol='😐&nbsp;' label='views' />}
+        text='meh &nbsp;'
+        icon={<IconEmoji symbol='😐&nbsp;' label='views' />}
       />
       <br/>
       Icon on left side of the counter
@@ -48,7 +50,8 @@ const App = () => {
         eventId='page-views'
         stepBy={1}
         dryRun={true}
-        iconCompLeft={<IconEmoji symbol='👎&nbsp;' label='views' />}
+        text='NOPE - I disliked it &nbsp;'
+        icon={<IconEmoji symbol='👎&nbsp;' label='views' />}
       />
       <br/>
       Icon on right side of the counter
@@ -58,7 +61,7 @@ const App = () => {
         eventId='page-views'
         stepBy={5}
         dryRun={true}
-        iconCompRight={<IconEmoji symbol='&nbsp;👋' label='views' />}
+        icon={<IconEmoji symbol='&nbsp;👋' label='views' />}
       />
       <br/>
       A bigger size for the emoji
@@ -68,7 +71,7 @@ const App = () => {
         eventId='page-views'
         stepBy={3}
         dryRun={true}
-        iconCompLeft={<IconEmoji symbol='👺' label='views' size={4} />}
+        icon={<IconEmoji symbol='👺' label='views' size={4} />}
       />
     </div>
   )

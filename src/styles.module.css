@@ -1,6 +1,6 @@
 .emojiContainer {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     color: #1a202c;
 }
 span.emoji {
