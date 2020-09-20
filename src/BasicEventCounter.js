@@ -27,13 +27,12 @@ export function BasicEventCounter({
       <div
         key={`${assetId}#${eventId}`}
         className={`${styles.emojiContainer} ${className}`}
-        onClick={() =>
-          postCounts(assetId, eventId, stepBy, count, setCount, dryRun)
-        }
       >
         {order.map((item, index) => {
           switch(item) {
-            case 'icon': return <div key='icon'>{icon}</div>
+            case 'icon': return <div onClick={() =>
+              postCounts(assetId, eventId, stepBy, count, setCount, dryRun)
+            } key='icon'>{icon}</div>
             case 'text': return <p key='text'>{text}</p>
             case 'count': return <p key='count'>({count})</p>
           }
