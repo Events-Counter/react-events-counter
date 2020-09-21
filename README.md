@@ -1,5 +1,9 @@
-# ✋ 🙅‍♀️ 🚫 THIS IS NOT YET READY FOR PUBLIC 🚫 🙅‍♀️ ✋
-## YOU WONT BE ABLE TO USE IT AS THIS LIBRARY REQUIRES AN API KEY TO COMMUNICATE WITH THE BACKEND.
+# ✋ 🙅‍♀️ 🚫 THIS LIBRARY REQUIRES AN API KEY 🚫 🙅‍♀️ ✋
+### For more info visit: https://www.therdnotes.com/projects/events-counter
+
+### Demo: https://raevilman.github.io/react-events-counter/
+
+### Used by: https://therdnotes.com/
 
 
 ---
@@ -18,17 +22,22 @@ npm install --save react-events-counter
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'react-events-counter'
+import { BasicLoadCounter } from 'react-events-counter'
 import 'react-events-counter/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <BasicLoadCounter 
+        assetId='home-page'
+        eventId='page-views'
+      />
   }
 }
 ```
+
+> Full documentation coming soon...
 
 ## License
 
