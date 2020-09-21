@@ -37,6 +37,8 @@ class Example extends Component {
 }
 ```
 
+> Full documentation coming soon...
+
 ## License
 
 MIT © [raevilman](https://github.com/raevilman)
