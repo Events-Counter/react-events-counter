@@ -8,11 +8,42 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+.result {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  background-color: rgb(218, 218, 218);
+  padding: 0.5em;
+  border-radius: 0.5em;
 }
 
-.counter {
-  color: brown !important;
+pre {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  background-color: rgb(218, 218, 218);
+  padding: 0.5em;
+  border-radius: 0.5em;
+  white-space: pre-wrap;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 800px;
+  color: #1a202c;
+}
+
+.footer {
+  text-align: center;
+}
+
+hr {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px
+}
+
+.cosmetics {
+  color: blueviolet !important;
+  text-decoration: underline;
 }

@@ -11,6 +11,9 @@ export function BasicLoadCounter({
   eventId,
   stepBy = 1,
   className,
+  text = '',
+  order = ['text', 'count'],
+  formatCount = { template: "{count}", countPlaceholder: "{count}"},
   dryRun = false
 }) {
   const [count, setCount] = useState(dryRun ? 162484 : undefined)
@@ -23,7 +26,26 @@ export function BasicLoadCounter({
     }
   }, [])
 
-  return <div className={className}>{count && <div>{count}</div>}</div>
+  if (count) {
+    return (
+      <div
+        key={`${assetId}#${eventId}`}
+        className={`${styles.counterContainer} ${className}`}
+      >
+        {order.map((item, index) => {
+          console.log('template '+formatCount.template);
+          console.log('placeholder '+formatCount.countPlaceholder);
+          console.log(formatCount.template.replace(formatCount.countPlaceholder, count));
+          switch(item) {
+            case 'text': return <p key='text'>{text}</p>
+            case 'count': return <p key='count'>{formatCount.template.replace(formatCount.countPlaceholder, count)}</p>
+          }
+        })}
+      </div>
+    )
+  } else {
+    return null;
+  }
 }
 
 BasicLoadCounter.propTypes = {

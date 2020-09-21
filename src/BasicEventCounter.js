@@ -14,6 +14,7 @@ export function BasicEventCounter({
   icon = '',
   text = '',
   order = ['icon', 'text', 'count'],
+  formatCount = { template: "{count}", countPlaceholder: "{count}"},
   dryRun = false
 }) {
   const [count, setCount] = useState(dryRun ? 162484 : undefined)
@@ -26,7 +27,7 @@ export function BasicEventCounter({
     return (
       <div
         key={`${assetId}#${eventId}`}
-        className={`${styles.emojiContainer} ${className}`}
+        className={`${styles.counterContainer} ${className}`}
       >
         {order.map((item, index) => {
           switch(item) {
@@ -34,7 +35,7 @@ export function BasicEventCounter({
               postCounts(assetId, eventId, stepBy, count, setCount, dryRun)
             } key='icon'>{icon}</div>
             case 'text': return <p key='text'>{text}</p>
-            case 'count': return <p key='count'>({count})</p>
+            case 'count': return <p key='count'>{formatCount.template.replace(formatCount.countPlaceholder, count)}</p>
           }
         })}
       </div>
