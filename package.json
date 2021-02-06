@@ -4,7 +4,7 @@
   "description": "react library for events-counter",
   "author": "raevilman",
   "license": "MIT",
-  "repository": "raevilman/react-events-counter",
+  "repository": "Events-Counter/react-events-counter",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",

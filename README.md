@@ -72,4 +72,4 @@ REACT_APP_EVENTS_COUNTER_DRY_RUN=1
 
 ## License
 
-MIT © [raevilman](https://github.com/raevilman)
+MIT © [Events Counter](https://github.com/Events-Counter)
