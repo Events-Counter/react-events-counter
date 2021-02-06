@@ -19,7 +19,7 @@ async function checkError(response) {
   }
 }
 
-export function postCounts(asset, event, count, setCount) {
+export function postCounts(asset, event, count, setCount, application, user) {
   if (!asset ) {
     console.error('asset is a required property!')
     return 
@@ -40,7 +40,14 @@ export function postCounts(asset, event, count, setCount) {
         }
       ]
     }
-
+    if(application) {
+      countsData['counts'][0]['application'] = application;
+    }
+    
+    if(user) {
+      countsData['counts'][0]['user'] = user;
+    }
+    
     fetch(COUNTS_RESOURCE_URL, {
       method: 'POST',
       headers: {

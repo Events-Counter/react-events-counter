@@ -9,6 +9,8 @@ import PropTypes from 'prop-types'
 export function EventsCounter({
   asset,
   event,
+  application,
+  user,
   className,
   countOnLoad = false,
   icon = '',
@@ -20,7 +22,7 @@ export function EventsCounter({
 
   useEffect(() => {
     if (countOnLoad) {
-      postCounts(asset, event, count, setCount)
+      postCounts(asset, event, count, setCount, application, user)
     } else {
       getCounts(asset, event, setCount)
     }

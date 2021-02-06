@@ -10,6 +10,7 @@ const App = () => {
         <h1>Events Counter</h1>
         <h3>Props:</h3>
         <table>
+          <tbody>
           <tr>
             <th>Name</th>
             <th>Description</th>
@@ -87,6 +88,7 @@ const App = () => {
             <td>no</td>
             <td></td>
           </tr>
+          </tbody>
         </table>
       </section>
 
@@ -121,6 +123,7 @@ const App = () => {
             asset='home-page'
             event='page-views'
             text='Total views:'
+            user='raevilman'
             countOnLoad={true}
           />
         </div>
@@ -276,7 +279,7 @@ const App = () => {
       <hr />
       <section>
         <p className='footer'>~~ Thats all folks! ~~</p>
-        <p className='footer'><a href="https://github.com/raevilman/react-events-counter" target="_blank" class="">GitHub Repo</a></p>
+        <p className='footer'><a href="https://github.com/raevilman/react-events-counter" target="_blank">GitHub Repo</a></p>
       </section>
     </div>
   )
