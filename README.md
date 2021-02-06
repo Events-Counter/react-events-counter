@@ -24,18 +24,20 @@ npm install --save react-events-counter
 ```jsx
 import React from 'react'
 
-import { BasicLoadCounter } from 'react-events-counter'
+import { EventsCounter } from 'react-events-counter'
 import 'react-events-counter/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <BasicLoadCounter 
-        assetId='home-page'
-        eventId='page-views'
+    return <EventsCounter 
+        asset='home-page'
+        event='page-views'
       />
   }
 }
 ```
+
+> ℹ For more examples, refer to the demo page mentioned above.
 
 ---
 
@@ -48,6 +50,25 @@ REACT_APP_EVENTS_COUNTER_DRY_RUN=1
 
 > Dry run can be set to 0 or 1.  
 > You should set it to 1 while developing. This will will avoid real API calls.
+
+---
+
+## Props
+
+|Name|Description|Required|Default|
+|--- |--- |--- |--- |
+|asset|asset identifier|yes||
+|event|asset identifier|yes||
+|user|user identifier, in case you want to link the event to a user|no||
+|application|name of the application|no||
+|text|text to be shown along side count|no||
+|icon|icon to be shown along side count|no||
+|order|order in which to render icon, text and count. type: list of string|no|['icon', 'text', 'count']|
+|countOnLoad|whether to count on load or not i.e. without user interaction. useful when counting page-views.|no|false|
+|formatCount|format the rendering of the count. Must contain `{count}`|no|{'{count}'}|
+|className|CSS class names|no||
+
+---
 
 ## License
 

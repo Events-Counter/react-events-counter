@@ -1,5 +1,4 @@
-import { BasicLoadCounter } from './BasicLoadCounter'
-import { BasicEventCounter } from './BasicEventCounter'
+import { EventsCounter } from './EventsCounter'
 import IconEmoji  from "./IconEmoji";
 
-export { BasicLoadCounter, BasicEventCounter, IconEmoji }
+export { EventsCounter, IconEmoji }
