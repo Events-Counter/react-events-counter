@@ -1,7 +1,7 @@
 # ✋ 🙅‍♀️ 🚫 THIS LIBRARY REQUIRES AN API KEY 🚫 🙅‍♀️ ✋
 ### For more info visit: https://eventscounter.com
 
-### Demo: https://raevilman.github.io/react-events-counter/
+### Demo: https://events-counter.github.io/react-events-counter/
 
 ### Used by: https://therdnotes.com/
 

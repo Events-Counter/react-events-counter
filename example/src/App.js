@@ -278,7 +278,7 @@ const App = () => {
       <hr />
       <section>
         <p className='footer'>~~ Thats all folks! ~~</p>
-        <p className='footer'><a href="https://github.com/raevilman/react-events-counter" target="_blank">GitHub Repo</a></p>
+        <p className='footer'><a href="https://github.com/Events-Counter/react-events-counter" target="_blank">GitHub Repo</a></p>
       </section>
     </div>
   )
