@@ -37,7 +37,17 @@ class Example extends Component {
 }
 ```
 
-> Full documentation coming soon...
+---
+
+## Environment variables:
+```
+REACT_APP_EVENTS_COUNTER_API_URL='https://api.eventscounter.com'
+REACT_APP_EVENTS_COUNTER_API_KEY=<api-key>
+REACT_APP_EVENTS_COUNTER_DRY_RUN=1
+```
+
+> Dry run can be set to 0 or 1.  
+> You should set it to 1 while developing. This will will avoid real API calls.
 
 ## License
 

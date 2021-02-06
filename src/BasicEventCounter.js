@@ -7,32 +7,30 @@ import PropTypes from "prop-types";
   This counter does NOT counts when loaded. This suits for like-event
 */
 export function BasicEventCounter({
-  assetId,
-  eventId,
-  stepBy = 1,
+  asset,
+  event,
   className,
   icon = '',
   text = '',
   order = ['icon', 'text', 'count'],
-  formatCount = { template: "{count}", countPlaceholder: "{count}"},
-  dryRun = false
+  formatCount = { template: "{count}", countPlaceholder: "{count}"}
 }) {
-  const [count, setCount] = useState(dryRun ? 162484 : undefined)
+  const [count, setCount] = useState(0)
 
   useEffect(() => {
-    getCounts(assetId, eventId, setCount, dryRun)
+    getCounts(asset, event, setCount)
   }, [])
 
   if (count) {
     return (
       <div
-        key={`${assetId}#${eventId}`}
+        key={`${asset}#${event}`}
         className={`${styles.counterContainer} ${className}`}
       >
         {order.map((item, index) => {
           switch(item) {
             case 'icon': return <div onClick={() =>
-              postCounts(assetId, eventId, stepBy, count, setCount, dryRun)
+              postCounts(asset, event, count, setCount)
             } key='icon'>{icon}</div>
             case 'text': return <p key='text'>{text}</p>
             case 'count': return <p key='count'>{formatCount.template.replace(formatCount.countPlaceholder, count)}</p>
@@ -46,6 +44,6 @@ export function BasicEventCounter({
 }
 
 BasicEventCounter.propTypes = {
-  assetId: PropTypes.string.isRequired,
-  eventId: PropTypes.string.isRequired,
+  asset: PropTypes.string.isRequired,
+  event: PropTypes.string.isRequired,
 };

@@ -11,16 +11,16 @@ body {
 .result {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-  background-color: rgb(218, 218, 218);
-  padding: 0.5em;
+  background-color: rgba(243, 244, 246);
+  padding: 1em;
   border-radius: 0.5em;
 }
 
 pre {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-  background-color: rgb(218, 218, 218);
-  padding: 0.5em;
+  background-color: rgba(243, 244, 246);
+  padding: 1em;
   border-radius: 0.5em;
   white-space: pre-wrap;
 }
