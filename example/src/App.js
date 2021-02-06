@@ -123,7 +123,6 @@ const App = () => {
             asset='home-page'
             event='page-views'
             text='Total views:'
-            user='raevilman'
             countOnLoad={true}
           />
         </div>
