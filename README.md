@@ -1,5 +1,5 @@
 # ✋ 🙅‍♀️ 🚫 THIS LIBRARY REQUIRES AN API KEY 🚫 🙅‍♀️ ✋
-### For more info visit: https://www.therdnotes.com/projects/events-counter
+### For more info visit: https://eventscounter.com
 
 ### Demo: https://raevilman.github.io/react-events-counter/
 
