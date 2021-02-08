@@ -2,7 +2,7 @@
   "name": "react-events-counter",
   "version": "0.0.1",
   "description": "react library for events-counter",
-  "author": "raevilman",
+  "author": "events-counter",
   "license": "MIT",
   "repository": "Events-Counter/react-events-counter",
   "main": "dist/index.js",
