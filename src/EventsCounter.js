@@ -39,7 +39,7 @@ export function EventsCounter({
             case 'icon':
               return (
                 <div
-                  onClick={() => postCounts(asset, event, count, setCount)}
+                  onClick={() => postCounts(asset, event, count, setCount, application, user)}
                   key='icon'
                 >
                   {icon}
