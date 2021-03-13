@@ -24,7 +24,7 @@ export function EventsCounter({
     if (countOnLoad) {
       postCounts(asset, event, count, setCount, application, user)
     } else {
-      getCounts(asset, event, setCount)
+      getCounts(asset, event, setCount, application, user)
     }
   }, [])
 

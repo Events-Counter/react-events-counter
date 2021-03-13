@@ -20,18 +20,18 @@ async function checkError(response) {
 }
 
 export function postCounts(asset, event, count, setCount, application, user) {
-  if (!asset ) {
-    console.error('asset is a required property!')
-    return 
-  }
-  if (!event ) {
-    console.error('event is a required property!')
-    return 
-  }
   if (IS_DRY_RUN) {
     console.log('Dry run: postCounts skipped')
     setCount(parseInt(count, 10) + 1)
   } else {
+    if (!asset ) {
+      console.error('asset is a required property!')
+      return 
+    }
+    if (!event ) {
+      console.error('event is a required property!')
+      return 
+    }
     let countsData = {
       counts: [
         {
@@ -74,13 +74,23 @@ export function postCounts(asset, event, count, setCount, application, user) {
   }
 }
 
-export function getCounts(asset, event, setCount) {
+export function getCounts(asset, event, setCount, application, user) {
   if (IS_DRY_RUN) {
     console.log('Dry run: getCounts skipped')
     setCount('0')
   } else {
+    if (!asset ) {
+      console.error('asset is a required property!')
+      return 
+    }
+    if (!event ) {
+      console.error('event is a required property!')
+      return 
+    }
+    let appQueryParam = application ? '&application=' + application : '';
+    let userQueryParam = user ? '&user=' + user : '';
     fetch(
-      COUNTS_RESOURCE_URL + '?asset=' + asset + '&event=' + event,
+      COUNTS_RESOURCE_URL + '?asset=' + asset + '&event=' + event + appQueryParam + userQueryParam,
       {
         method: 'GET',
         headers: {
